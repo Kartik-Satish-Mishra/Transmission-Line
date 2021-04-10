@@ -3,5 +3,5 @@
 to run this project
 - Download all files
 - install python 3
-- inatall module pygame
-- run TransmissionLine.py file.
+- install module pygame
+- to run project run TransmissionLine.py file.
