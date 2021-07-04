@@ -1,7 +1,11 @@
-import pygame
-import TL_Classes
+import pygame, TL_Classes, os, sys
 from pygame.locals import *
 from pygame.time import delay
+
+img_dir = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
+def get_file(file):
+    return os.path.abspath(os.path.join(img_dir, "img", file))
+
 pygame.init()
 s_size = (1000, 600)
 cell_size = (100, 100)
@@ -9,18 +13,18 @@ screen = pygame.display.set_mode(s_size)
 font = pygame.font.Font('freesansbold.ttf', 32)
 
 start_bg = pygame.transform.scale(
-    pygame.image.load("frame.png").convert(),
+    pygame.image.load(get_file("frame.png")).convert(),
     s_size
 )
 
 start_button = pygame.transform.scale(
-    pygame.image.load("start.jpg").convert(),
+    pygame.image.load(get_file("start.jpg")).convert(),
     (200, 120)
 )
 button_rect = start_button.get_rect()
 button_rect.center = (500, 400)
 
-pygame.display.set_caption('Transmission Line')
+pygame.display.set_caption(get_file("idhar"))
 
 stage_1 = [
     [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],

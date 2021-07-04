@@ -1,4 +1,8 @@
-import pygame
+import pygame, os, sys
+
+img_dir = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
+def get_file(file):
+    return os.path.abspath(os.path.join(img_dir, "img", file))
 
 cell_size = (100, 100)
 minimum_signal_strength = {'PAM': 10, 'PWM': 5}
@@ -15,7 +19,7 @@ class block():
         self.image_sprites = []
         for image in image_file_names:
             self.image_sprites.append(pygame.transform.scale(
-                pygame.image.load(image).convert_alpha(),
+                pygame.image.load(get_file(image)).convert_alpha(),
                 cell_size))
         self.image = self.image_sprites[0]
 
@@ -146,11 +150,11 @@ class level():
         self.output = ''
 
         self.run_image = pygame.transform.scale(
-            pygame.image.load('run.jpg').convert_alpha(),
+            pygame.image.load(get_file('run.jpg')).convert_alpha(),
             cell_size)
         
         self.frame = pygame.transform.scale(
-            pygame.image.load('frame.png').convert_alpha(),
+            pygame.image.load(get_file('frame.png')).convert_alpha(),
             (800,400))
 
         for row in range(self.rows):
