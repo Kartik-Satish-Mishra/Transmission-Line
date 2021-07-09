@@ -6,7 +6,7 @@ Discription
 To run this project
 
 - Method 1
-  - Download "transmissionLine.py", "TL_Classes.py" and "img" file.
+  - Download "transmissionLine.py", "TL_Classes.py" and "img" file/folder on your local machine.
   - install python 3.
   - install module pygame.
   - to run project run TransmissionLine.py file.
