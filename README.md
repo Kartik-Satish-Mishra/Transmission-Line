@@ -1,7 +1,7 @@
 # Transmission-Line
 
 Discription
-- Here we are able to learn / construct / verify the knowledge of our different modulation techniques. PAM and PWM has been demonstrated in the provided example level. Level can be easily modified and created using provided TL_classes module. All development of this project is been carried out by keeping students perspective of interest in game and merged it with technology to improve their study. This is a proper example of gamification
+- Here we are able to learn / construct / verify the knowledge of our different modulation techniques. PAM and PWM has been demonstrated in the provided example level. Level can be easily modified and created using provided TL_classes Class. All development of this project is been carried out by keeping students perspective of interest in game and merged it with technology to improve their study. This is a proper example of gamification
 
 To run this project
 
